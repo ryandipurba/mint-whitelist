@@ -37,6 +37,7 @@ export interface HomeProps {
 }
 
 const Home = (props: HomeProps) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [api_url, setUrl] = useState(process.env.REACT_APP_API_URL)
   const [balance, setBalance] = useState<number>();
   const [isActive, setIsActive] = useState(false); // true when countdown completes
@@ -189,6 +190,7 @@ const Home = (props: HomeProps) => {
         }
       }
     })();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [wallet, props.connection]);
 
   useEffect(refreshCandyMachineState, [
